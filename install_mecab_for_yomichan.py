@@ -29,30 +29,31 @@ elif sys.version_info[0] == 2:
 
 DIR = os.path.realpath(os.path.dirname(__file__))
 
-NAME = 'yomichan_mecab'
+NAME = 'yomitan_mecab'
 
 MANIFEST_TEMPLATE = {
-    'name': 'yomichan_mecab',
-    'description': 'MeCab for Yomichan',
+    'name': 'yomitan_mecab',
+    'description': 'MeCab for Yomitan',
     'type': 'stdio',
 }
 
 BROWSER_DATA = {
-    'firefox': {
-        'extension_id_key': 'allowed_extensions',
-        'extension_ids': ['alex@foosoft.net'],
-    },
+    # There isn't an official Firefox release yet, not sure if this will work
+    # 'firefox': {
+    #     'extension_id_key': 'allowed_extensions',
+    #     'extension_ids': ['alex@foosoft.net'],
+    # },
     'chrome': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://ogmnaimimemjmbakcfefmnahgdfhfami/'],
+        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'chromium': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://ogmnaimimemjmbakcfefmnahgdfhfami/'],
+        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'edge': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://ogmnaimimemjmbakcfefmnahgdfhfami/'],
+        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
 }
 
@@ -181,7 +182,7 @@ def main():
 
     # generate manifest
     print('')
-    print('Using default Yomichan extension ID for {}.'.format(browser))
+    print('Using default Yomitan extension ID for {}.'.format(browser))
     print('Add more extension IDs, or press enter to continue')
     additional_extension_ids = []
     while True:
@@ -191,7 +192,7 @@ def main():
         additional_extension_ids.append(extension_id)
     script_path = os.path.join(DIR, 'mecab.py')
     if platform_data['platform'] == 'windows':
-        bat_path = os.path.join(DIR, 'mecab_yomichan.bat')
+        bat_path = os.path.join(DIR, 'mecab_yomitan.bat')
         with open(bat_path, 'w') as f:
             f.write('@echo off\n"{}" -u "{}"'.format(
                 sys.executable,
