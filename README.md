@@ -15,7 +15,7 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
     - **Windows**: https://taku910.github.io/mecab/#download (mecab-x.xxx.exe:ダウンロード)
     - **Mac**: run `brew install mecab`
     - **Linux**: package managers usually include MeCab. You don't need to install a dictionary package from the package manager, this script downloads the required dictionaries for you
-1. [Download](https://github.com/siikamiika/yomichan-mecab-installer/archive/master.zip) and extract this repository
+1. [Download](https://github.com/starxeras/yomitan-mecab-installer/archive/master.zip) and extract this repository
 to the location where you wish to install the files. `~/Downloads` might not be the best place
 1. Run `install_mecab_for_yomichan.py` and follow the instructions
 
