@@ -1,6 +1,6 @@
-# Yomichan MeCab Installer
+# Yomitan MeCab Installer
 
-Installs the files required to run [MeCab](https://taku910.github.io/mecab/) in [Yomichan](https://foosoft.net/projects/yomichan/).
+Installs the files required to run [MeCab](https://taku910.github.io/mecab/) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
 Python and MeCab have to be installed separately.
 
 ## Installation
@@ -17,7 +17,7 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
     - **Linux**: package managers usually include MeCab. You don't need to install a dictionary package from the package manager, this script downloads the required dictionaries for you
 1. [Download](https://github.com/starxeras/yomitan-mecab-installer/archive/master.zip) and extract this repository
 to the location where you wish to install the files. `~/Downloads` might not be the best place
-1. Run `install_mecab_for_yomichan.py` and follow the instructions
+1. Run `install_mecab_for_yomitan.py` and follow the instructions
 
 ![demo video](demo.gif)
 
