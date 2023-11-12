@@ -61,10 +61,10 @@ PLATFORM_DATA = {
     'linux': {
         'platform_aliases': ['linux', 'linux2', 'riscos', 'freebsd7', 'freebsd8', 'freebsdN', 'openbsd6'],
         'manifest_install_data': {
-            'firefox': {
-                'methods': ['file'],
-                'path': os.path.expanduser('~/.mozilla/native-messaging-hosts/'),
-            },
+            # 'firefox': {
+            #     'methods': ['file'],
+            #     'path': os.path.expanduser('~/.mozilla/native-messaging-hosts/'),
+            # },
             'chrome': {
                 'methods': ['file'],
                 'path': os.path.expanduser('~/.config/google-chrome/NativeMessagingHosts/'),
@@ -78,11 +78,11 @@ PLATFORM_DATA = {
     'windows': {
         'platform_aliases': ['win32', 'cygwin'],
         'manifest_install_data': {
-            'firefox': {
-                'methods': ['file', 'registry'],
-                'path': DIR,
-                'registry_path': 'SOFTWARE\\Mozilla\\NativeMessagingHosts\\{}'.format(NAME),
-            },
+            # 'firefox': {
+            #     'methods': ['file', 'registry'],
+            #     'path': DIR,
+            #     'registry_path': 'SOFTWARE\\Mozilla\\NativeMessagingHosts\\{}'.format(NAME),
+            # },
             'chrome': {
                 'methods': ['file', 'registry'],
                 'path': DIR,
