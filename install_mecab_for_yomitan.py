@@ -38,7 +38,7 @@ MANIFEST_TEMPLATE = {
 }
 
 BROWSER_DATA = {
-    # There isn't an official Firefox release yet, not sure if this will work
+    # Not sure how this works, so I'll be deleting it for now.
     # 'firefox': {
     #     'extension_id_key': 'allowed_extensions',
     #     'extension_ids': ['alex@foosoft.net'],
