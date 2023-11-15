@@ -1,7 +1,5 @@
 # Yomitan MeCab Installer
 
-**Firefox currently doesn't work because I'm not sure if yomitan has an official Firefox extension id... If you know how to get this to work, please contribute!**
-
 Installs the files required to run [MeCab](https://taku910.github.io/mecab/) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
 Python and MeCab have to be installed separately.
 
