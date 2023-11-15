@@ -38,11 +38,10 @@ MANIFEST_TEMPLATE = {
 }
 
 BROWSER_DATA = {
-    # Not sure how this works, so I'll be deleting it for now.
-    # 'firefox': {
-    #     'extension_id_key': 'allowed_extensions',
-    #     'extension_ids': ['alex@foosoft.net'],
-    # },
+    'firefox': {
+        'extension_id_key': 'allowed_extensions',
+        'extension_ids': ['{2d13e145-294e-4ead-9bce-b4644b203a00}'],
+    },
     'chrome': {
         'extension_id_key': 'allowed_origins',
         'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
@@ -61,10 +60,10 @@ PLATFORM_DATA = {
     'linux': {
         'platform_aliases': ['linux', 'linux2', 'riscos', 'freebsd7', 'freebsd8', 'freebsdN', 'openbsd6'],
         'manifest_install_data': {
-            # 'firefox': {
-            #     'methods': ['file'],
-            #     'path': os.path.expanduser('~/.mozilla/native-messaging-hosts/'),
-            # },
+            'firefox': {
+                'methods': ['file'],
+                'path': os.path.expanduser('~/.mozilla/native-messaging-hosts/'),
+            },
             'chrome': {
                 'methods': ['file'],
                 'path': os.path.expanduser('~/.config/google-chrome/NativeMessagingHosts/'),
