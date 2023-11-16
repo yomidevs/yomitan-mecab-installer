@@ -1,6 +1,6 @@
 # Yomitan MeCab Installer
 
-Installs the files required to run [MeCab](https://taku910.github.io/mecab/) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
+Installs the files required to run [MeCab](https://taku910.github.io/mecab/#download) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
 Python and MeCab have to be installed separately.
 
 ## Installation
