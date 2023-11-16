@@ -26,7 +26,8 @@ to the location where you wish to install the files. `~/Downloads` might not be 
 
 Some things to note:
 - If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
-- If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a `Permission denied` error when running the script. 
+- If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a `Permission denied` error when running the script.
+- If you ran the script but it displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username starxeras.
 
 ![demo video](demo.gif)
 
