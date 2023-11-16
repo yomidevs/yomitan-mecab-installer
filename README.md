@@ -17,7 +17,7 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
     - **Linux**: package managers usually include MeCab. You don't need to install a dictionary package from the package manager, this script downloads the required dictionaries for you.
 1. [Download](https://github.com/starxeras/yomitan-mecab-installer/archive/master.zip) and extract this repository.
 to the location where you wish to install the files. `~/Downloads` might not be the best place, as the dictionary files are stored in the same directory.
-1. Run `install_mecab_for_yomitan.py` and follow the instructions.
+1. Run `install_mecab_for_yomitan.py` using Python and follow the instructions.
 2. Go to the Yomitan settings page in the browser you selected.
 3. Click `Advanced` in the bottom left corner.
 4. Go to `Text Parsing`.
@@ -30,5 +30,6 @@ Some things to note:
 - If you ran the script but it displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username starxeras.
 
 ![demo video](demo.gif)
+*Demo video using Linux*
 
 You can move the install directory later, but you have to run the install again if you do that.
