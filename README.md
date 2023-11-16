@@ -1,15 +1,15 @@
 # Yomitan MeCab Installer
 
-Installs the files required to run [MeCab](https://taku910.github.io/mecab/#download) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
+Installs the files required to run [MeCab](https://taku910.github.io/) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
 Python and MeCab have to be installed separately.
 
 ## Installation
 
 If you are running Mac, first install [Homebrew](https://brew.sh/), as it is used to install the dependencies.
 
-1. Install Python 2 or 3
+1. Install Python
     - **Windows**: https://www.python.org/downloads/
-    - **Mac**: Python 2 is deprecated and will be removed in 10.16. To install Python 3, run `brew install python3`
+    - **Mac**: Run `brew install python3`
     - **Linux**: Python is usually included with a Linux distribution
 1. Install MeCab
     - **Windows**: https://taku910.github.io/mecab/#download (mecab-x.xxx.exe:ダウンロード)
