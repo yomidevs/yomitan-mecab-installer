@@ -77,11 +77,11 @@ PLATFORM_DATA = {
     'windows': {
         'platform_aliases': ['win32', 'cygwin'],
         'manifest_install_data': {
-            # 'firefox': {
-            #     'methods': ['file', 'registry'],
-            #     'path': DIR,
-            #     'registry_path': 'SOFTWARE\\Mozilla\\NativeMessagingHosts\\{}'.format(NAME),
-            # },
+            'firefox': {
+                'methods': ['file', 'registry'],
+                'path': DIR,
+                'registry_path': 'SOFTWARE\\Mozilla\\NativeMessagingHosts\\{}'.format(NAME),
+            },
             'chrome': {
                 'methods': ['file', 'registry'],
                 'path': DIR,
@@ -118,18 +118,18 @@ PLATFORM_DATA = {
 }
 
 DICTIONARY_DATA = {
-    'ipadic': {
-        'url': 'https://github.com/siikamiika/yomichan-mecab-installer/releases/download/ipadic-1/ipadic.zip',
-        'compression': 'zip',
-        'size': '51M',
-        'description': 'A basic dictionary',
-    },
-    'unidic-mecab-translate': {
-        'url': 'https://github.com/siikamiika/unidic-mecab-translate/releases/download/1.2/unidic-mecab-translate-1.2.zip',
+    'unidic-mecab-translate ⭐': {
+        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/unidic/unidic.zip',
         'compression': 'zip',
         'size': '191M',
-        'description': 'A dictionary that prefers shorter words to longer ones, is usually more accurate, and shows pronunciation instead of reading',
+        'description': 'A dictionary that prefers shorter words to longer ones, is usually more accurate, and shows pronunciation instead of reading.',
     }
+    'ipadic': {
+        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/ipadic/ipadic.zip',
+        'compression': 'zip',
+        'size': '51M',
+        'description': 'A basic dictionary.',
+    },
 }
 
 def platform_data_get():
