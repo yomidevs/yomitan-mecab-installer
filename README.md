@@ -21,12 +21,12 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
 3. Enable advanced options by clicking the toggle switch in the bottom left corner.
 4. Go to `Text Parsing`.
 5. Enable `Parse sentences using MeCab`.
-6. To check if you installed it correctly, click the `More...` button and select `Test`. If it returns "Connection was successful", MeCab is now installed for Yomitan.
+6. To check if it's installed correctly, click the `More...` button and select `Test`. If it returns "Connection was successful", MeCab is now installed for Yomitan.
 
 Some things to note:
 - If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
 - If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a `Permission denied` error when running the script.
-- If you ran the script but it displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username starxeras.
+- If you ran the script but clicking the `Test` button in the Settings page displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username starxeras.
 
 ![demo video](demo.gif)
 *Demo video using Linux*
