@@ -18,7 +18,7 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
 1. [Download](https://github.com/starxeras/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location where you wish to install the files. `~/Downloads` might not be the best place, as the dictionary files are stored in the same directory.
 1. Run `install_mecab_for_yomitan.py` using Python and follow the instructions.
 2. Go to the Yomitan settings page in the browser you selected.
-3. Click `Advanced` in the bottom left corner.
+3. Enable advanced options by clicking the toggle switch in the bottom left corner.
 4. Go to `Text Parsing`.
 5. Enable `Parse sentences using MeCab`.
 6. To check if you installed it correctly, click the `More...` button and select `Test`. If it returns "Connection was successful", MeCab is now installed for Yomitan.
