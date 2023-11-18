@@ -119,13 +119,13 @@ PLATFORM_DATA = {
 
 DICTIONARY_DATA = {
     'unidic-mecab-translate ⭐': {
-        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/unidic/unidic.zip',
+        'url': 'https://github.com/themoeway/yomitan-mecab-installer/releases/download/unidic/unidic.zip',
         'compression': 'zip',
         'size': '191M',
         'description': 'A dictionary that prefers shorter words to longer ones, is usually more accurate, and shows pronunciation instead of reading.',
     },
     'ipadic': {
-        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/ipadic/ipadic.zip',
+        'url': 'https://github.com/themoeway/yomitan-mecab-installer/releases/download/ipadic/ipadic.zip',
         'compression': 'zip',
         'size': '51M',
         'description': 'A basic dictionary.',
