@@ -40,19 +40,19 @@ MANIFEST_TEMPLATE = {
 BROWSER_DATA = {
     'firefox': {
         'extension_id_key': 'allowed_extensions',
-        'extension_ids': ['{2d13e145-294e-4ead-9bce-b4644b203a00}'],
+        'extension_ids': ['{6b733b82-9261-47ee-a595-2dda294a4d08}'],
     },
     'chrome': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
     },
     'chromium': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
     },
     'edge': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
     },
 }
 
@@ -119,13 +119,13 @@ PLATFORM_DATA = {
 
 DICTIONARY_DATA = {
     'unidic-mecab-translate ⭐': {
-        'url': 'https://github.com/themoeway/yomitan-mecab-installer/releases/download/unidic/unidic.zip',
+        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/unidic/unidic.zip',
         'compression': 'zip',
         'size': '191M',
         'description': 'A dictionary that prefers shorter words to longer ones, is usually more accurate, and shows pronunciation instead of reading.',
     },
     'ipadic': {
-        'url': 'https://github.com/themoeway/yomitan-mecab-installer/releases/download/ipadic/ipadic.zip',
+        'url': 'https://github.com/starxeras/yomitan-mecab-installer/releases/download/ipadic/ipadic.zip',
         'compression': 'zip',
         'size': '51M',
         'description': 'A basic dictionary.',
