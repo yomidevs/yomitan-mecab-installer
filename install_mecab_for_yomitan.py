@@ -208,8 +208,9 @@ def main():
                 import winreg
             elif sys.version_info[0] == 2:
                 import _winreg as winreg
-            winreg.CreateKey(winreg.HKEY_CURRENT_USER,
-                             manifest_install_data['registry_path'])
+            winreg.CreateKeyEx(winreg.HKEY_CURRENT_USER,
+                             manifest_install_data['registry_path'],
+                             0, winreg.KEY_ALL_ACCESS | winreg.KEY_WOW64_64KEY)
             registry_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
                                           manifest_install_data['registry_path'],
                                           0, winreg.KEY_WRITE)
