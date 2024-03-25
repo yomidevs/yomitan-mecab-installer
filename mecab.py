@@ -101,6 +101,8 @@ class Mecab:
     def get_executable_path(self):
         if os.name == 'nt':
             return self.get_nt_executable_path()
+        elif os.name == 'posix':
+            return self.get_posix_executable_path()
         return 'mecab'
 
     def get_nt_executable_path(self):
@@ -125,6 +127,17 @@ class Mecab:
             return path
         # assume it exists in %PATH%
         return 'mecab.exe'
+
+    def get_posix_executable_path(self):
+        # check %PATH%
+        if shutil.which('mecab') != None:
+            return 'mecab'
+        # assume mecab is installed via Homebrew
+        if platform.processor() == 'arm':
+            # use default Apple Silicon path
+            return '/opt/homebrew/bin/mecab'
+        # use default macOS Intel path
+        return '/usr/local/bin/mecab'
 
     def parse(self, text):
         parsed_lines = []
