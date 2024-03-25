@@ -21,7 +21,9 @@ from __future__ import print_function
 import json
 import sys
 import os
+import platform
 import re
+import shutil
 import struct
 import subprocess
 import threading
@@ -101,8 +103,8 @@ class Mecab:
     def get_executable_path(self):
         if os.name == 'nt':
             return self.get_nt_executable_path()
-        elif os.name == 'posix':
-            return self.get_posix_executable_path()
+        if sys.platform == 'darwin':
+            return self.get_darwin_executable_path()
         return 'mecab'
 
     def get_nt_executable_path(self):
@@ -128,7 +130,7 @@ class Mecab:
         # assume it exists in %PATH%
         return 'mecab.exe'
 
-    def get_posix_executable_path(self):
+    def get_darwin_executable_path(self):
         # check %PATH%
         if shutil.which('mecab') != None:
             return 'mecab'
