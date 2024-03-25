@@ -103,7 +103,7 @@ class Mecab:
     def get_executable_path(self):
         if os.name == 'nt':
             return self.get_nt_executable_path()
-        if sys.platform == 'darwin':
+        if sys.platform == 'darwin': # macOS
             return self.get_darwin_executable_path()
         return 'mecab'
 
