@@ -45,15 +45,15 @@ BROWSER_DATA = {
     },
     'chrome': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'chromium': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'edge': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
 }
 
