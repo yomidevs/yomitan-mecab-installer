@@ -41,19 +41,20 @@ MANIFEST_TEMPLATE = {
 BROWSER_DATA = {
     'firefox': {
         'extension_id_key': 'allowed_extensions',
-        'extension_ids': ['{6b733b82-9261-47ee-a595-2dda294a4d08}'],
+        # See README.md, important
+        'extension_ids': ['{a25fed0c-47c9-477d-8f48-e4b4ee67cdaf}', '{9ed7d4a5-f8cd-4285-9977-e6389a91fd72}'],
     },
     'chrome': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'chromium': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
     'edge': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
 }
 
