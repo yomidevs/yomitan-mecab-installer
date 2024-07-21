@@ -56,7 +56,7 @@ If you are a Firefox user and/or have built Yomitan from source, you need to obt
 - That's because, from what I've seen, Firefox gives a unique extension ID for every user, instead of one global one like in the Chrome store. This makes it much trickier to install MeCab.
 
 ## Notes
-- If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
+- If you try to run the installer again for use on multiple browsers, it will not work. You have to duplicate the repository folder. 
 - If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a Permission denied error when running the script.
 - Try to close and reopen your browser if it isn't showing `Connection was successful.`.
 
