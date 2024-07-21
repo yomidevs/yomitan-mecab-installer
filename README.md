@@ -51,8 +51,9 @@ If you are a Firefox user and/or have built Yomitan from source, you need to obt
 
 ## FAQ
 
-*Why is firefox different?*: 
-    - That's because, from what I've seen, Firefox gives a unique extension ID for every user, instead of one global one like in the Chrome store. This makes it much trickier to install MeCab.
+*Why is firefox different?* 
+
+- That's because, from what I've seen, Firefox gives a unique extension ID for every user, instead of one global one like in the Chrome store. This makes it much trickier to install MeCab.
 
 ## Notes
 - If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
