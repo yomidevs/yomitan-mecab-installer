@@ -23,7 +23,7 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
 3. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
     - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
 4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
-    - ❗❗ **If you are using Firefox or built Yomitan from source, please refer to the [How to find your extension ID.](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.**
+    - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.**
 5. Go to the Yomitan settings page on your browser.
 6. Enable advanced options by clicking the toggle switch in the bottom left corner.
 7. Go to `Text Parsing`.
@@ -32,7 +32,7 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
     - `Connection was successful.` - MeCab is now installed, congratulations.
     - `Could not connect to native MeCab component` - Something went wrong. Please refer to the [Notes](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#notes) section and the [FAQ](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#faq).
 
-## ❓ How to find your extension ID.
+## ❓ How to find your extension ID
 
 If you are a Firefox user and/or have built Yomitan from source, you need to obtain the extension ID for Yomitan. If you reinstall Yomitan, MeCab may no longer work for you in this case.
 - Chrome/Chromium/Edge:
