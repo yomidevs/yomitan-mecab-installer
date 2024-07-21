@@ -20,7 +20,7 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
         - Ubuntu: `sudo apt install mecab mecab-ipadic-utf8`
         - Fedora: `sudo dnf install mecab mecab-ipadic`
         - Arch: `sudo pacman -S mecab-git mecab-ipadic`
-        <small>Note: these aren't tested commands, as I don't use Linux personally. If there are any problems with the commands, please submit an issue or a PR.</small>
+              - (Note: these aren't tested commands, as I don't use Linux personally. If there are any problems with the commands, please submit an issue or a PR.)
 3. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
     - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
 4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
