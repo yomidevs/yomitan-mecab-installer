@@ -54,7 +54,7 @@ BROWSER_DATA = {
     },
     'edge': {
         'extension_id_key': 'allowed_origins',
-        'extension_ids': ['extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'extension://glnaenfapkkecknnmginabpmgkenenml/'],
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
 }
 
