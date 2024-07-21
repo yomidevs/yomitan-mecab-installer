@@ -24,9 +24,10 @@ If you are running Mac, first install [Homebrew](https://brew.sh/), as it is use
 6. To check if it's installed correctly, click the `More...` button and select `Test`. If it returns "Connection was successful", MeCab is now installed for Yomitan.
 
 Some things to note:
+- If it does not work, try to use the extension ID that is found in your settings page. For chrome, it is usually a string of text like this: `chrome-extension://mbclianmdhnmblbfecpefmgjhajbioip/`. *Make sure to include the chrome-extension:// and the final / at the end. For firefox, you can find the extension ID in the options page for the extension itself. It will be in brackets, usually: `{6b733b82-9261-47ee-a595-2dda294a4d08}`, is an example. Include the brackets.
 - If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
 - If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a `Permission denied` error when running the script.
-- If you ran the script but clicking the `Test` button in the Settings page displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username starxeras.
+- If you ran the script but clicking the `Test` button in the Settings page displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username koiyakiya.
 
 ![demo video](demo.gif)
 *Demo video using Linux*
