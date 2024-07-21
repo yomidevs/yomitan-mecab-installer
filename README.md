@@ -57,7 +57,7 @@ If you are a Firefox user and/or have built Yomitan from source, you need to obt
 
 ## Notes
 - If you try to run the installer again for use on multiple browsers, it will not work. You have to duplicate the repository folder. 
-- If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a Permission denied error when running the script.
+- If you wish to use MeCab on another browser (replacing the old one, same folder), close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a Permission denied error when running the script.
 - Try to close and reopen your browser if it isn't showing `Connection was successful.`.
 
 - If you have any particular issues with installing MeCab, make an issue request. I'll try to help you as fast as possible. If you don't want to bother making a Github account, just shoot me a DM on Discord -- `koiyakiya`
