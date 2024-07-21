@@ -22,9 +22,9 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
         - Arch: `sudo pacman -S mecab-git mecab-ipadic`
         <small>Note: these aren't tested commands, as I don't use Linux personally. If there are any problems with the commands, please submit an issue or a PR.</small>
 3. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
-    - *Important*: Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
+    - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
 4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
-    - ❗If you are using Firefox or built Yomitan from source, please refer to the [How to find your extension ID.](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.
+    - ❗❗ **If you are using Firefox or built Yomitan from source, please refer to the [How to find your extension ID.](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.**
 5. Go to the Yomitan settings page on your browser.
 6. Enable advanced options by clicking the toggle switch in the bottom left corner.
 7. Go to `Text Parsing`.
