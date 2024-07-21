@@ -1,35 +1,64 @@
 # Yomitan MeCab Installer
 
-Installs the files required to run [MeCab](https://taku910.github.io/) in [Yomitan](https://github.com/TheMoeWay/yomitan/).
-Python and MeCab have to be installed separately.
+🇯🇵 *This is for Japanese only.*
 
-## Installation
+[MeCab](https://taku910.github.io/) is a third-party program which uses its own dictionaries and parsing algorithm to decompose Japanese sentences into individual words. MeCab may produce more accurate parsing results than Yomitan’s own internal parser.
 
-If you are running Mac, first install [Homebrew](https://brew.sh/), as it is used to install the dependencies.
+## ⏬ Installation
 
-1. Install Python
-    - **Windows**: https://www.python.org/downloads/
-    - **Mac**: Run `brew install python3`
-    - **Linux**: Python is usually included with a Linux distribution.
-1. Install MeCab
-    - **Windows**: https://taku910.github.io/mecab/#download (mecab-x.xxx.exe:ダウンロード)
-    - **Mac**: run `brew install mecab`
-    - **Linux**: package managers usually include MeCab. You don't need to install a dictionary package from the package manager, this script downloads the required dictionaries for you.
-1. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location where you wish to install the files. `~/Downloads` might not be the best place, as the dictionary files are stored in the same directory.
-1. Run `install_mecab_for_yomitan.py` using Python and follow the instructions.
-2. Go to the Yomitan settings page in the browser you selected.
-3. Enable advanced options by clicking the toggle switch in the bottom left corner.
-4. Go to `Text Parsing`.
-5. Enable `Parse sentences using MeCab`.
-6. To check if it's installed correctly, click the `More...` button and select `Test`. If it returns "Connection was successful", MeCab is now installed for Yomitan.
+Note: [Homebrew](https://brew.sh/) is required for Mac devices.
 
-Some things to note:
-- If it does not work, try to use the extension ID that is found in your settings page. For chrome, it is usually a string of text like this: `chrome-extension://mbclianmdhnmblbfecpefmgjhajbioip/`. *Make sure to include the chrome-extension:// and the final / at the end. For firefox, you can find the extension ID in the options page for the extension itself. It will be in brackets, usually: `{6b733b82-9261-47ee-a595-2dda294a4d08}`, is an example. Include the brackets.
+1. Install Python.
+    - Windows: https://www.python.org/downloads/ 
+         - [Chocolately](https://chocolatey.org/): `choco install python`
+    - Mac: Run `brew install python3`
+    - Linux: Python is usually included with your distribution.
+2. Install MeCab.
+    - Windows: https://taku910.github.io/mecab/#download (In the `Binary package for MS-Windows` header.)
+    - Mac: Simply run `brew install mecab`.
+    - Linux: It depends on your distribution, but most package managers have mecab as a package. Search around for your specific distribution. Make sure to install the dictionary that comes with it, though.
+        - Ubuntu: `sudo apt install mecab mecab-ipadic-utf8`
+        - Fedora: `sudo dnf install mecab mecab-ipadic`
+        - Arch: `sudo pacman -S mecab-git mecab-ipadic`
+        <small>Note: these aren't tested commands, as I don't use Linux personally. If there are any problems with the commands, please submit an issue or a PR.</small>
+3. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
+    - *Important*: Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
+4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
+    - ❗If you are using Firefox or built Yomitan from source, please refer to the **How to find your extension ID.** header below.
+5. Go to the Yomitan settings page on your browser.
+6. Enable advanced options by clicking the toggle switch in the bottom left corner.
+7. Go to `Text Parsing`.
+8. Enable `Parse sentences using MeCab` and click `More...`.
+9. Click the `Test` button to see if MeCab was installed correctly.
+    - `Connection was successful.` - MeCab is now installed, congratulations.
+    - `Could not connect to native MeCab component` - Something went wrong. Please refer to the **Notes** section and the **FAQ**.
+
+## ❓ How to find your extension ID.
+
+If you are a Firefox user and/or have built Yomitan from source, you need to obtain the extension ID for Yomitan. If you reinstall Yomitan, MeCab may no longer work for you in this case.
+- Chrome/Chromium/Edge:
+    - Open up your Yomitan settings page. The URL should look something like this:
+    - ![image](https://github.com/user-attachments/assets/4f87be39-6cb4-45df-a9a7-09fb9a177c1d)
+    - (Note: On Edge, the prefix will be `extension://`. **Make sure to change this to `chrome-extension://`, otherwise it will not work.**)
+    - Copy everything before `settings.html`. For example: `chrome-extension://mbclianmdhnmblbfecpefmgjhajbioip/`.
+    - ❗***Make sure to remember the `chrome-extension://` AND the `/` at the end of the ID!!***
+    - Then, rerun the script as seen above and when it displays `Add more extension IDs`, paste the extension ID URL that you got. It should work. Continue with the tutorial.
+- Firefox:
+    - Open up your Yomitan settings page. The URL should look like this:
+    - ![image](https://github.com/user-attachments/assets/618f262e-ce3c-47eb-a1e4-d60dd684adaa)
+    - Now, copy everything in between `moz-extension://` and `/settings.html`. For example: `9ed7d4a5-f8cd-4285-9977-e6389a91fd72`.
+    - Next, put the line of numbers and letters in between brackets: `{9ed7d4a5-f8cd-4285-9977-e6389a91fd72}`. That is your Extension ID. Copy it.
+    - Rerun the script as seen above and when it displays `Add more extension IDs`, paste the extension ID **with the brackets** in the input. It should work. Continue with the tutorial.
+
+## FAQ
+
+*Why is firefox different?*: 
+    - That's because, from what I've seen, Firefox gives a unique extension ID for every user, instead of one global one like in the Chrome store. This makes it much trickier to install MeCab.
+
+## Notes
 - If you try to run the installer for use on multiple browsers, it will not work. Only one browser can use the MeCab for Yomitan installation.
-- If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a `Permission denied` error when running the script.
-- If you ran the script but clicking the `Test` button in the Settings page displays `Could not connect to native MeCab component`, try to close and reopen your browser. If that does not work, try to run the script without the browser running. If you have any questions, you can contact me on Discord with the username koiyakiya.
+- If you wish to use MeCab on another browser, close the browser that has MeCab for Yomitan installed. If you do not do this, you will get a Permission denied error when running the script.
+- Try to reopen and close your browser if it isn't showing `Connection was successful.`.
 
-![demo video](demo.gif)
-*Demo video using Linux*
+- If you have any particular issues with installing MeCab, make an issue request. I'll try to help you as fast as possible. If you don't want to bother making a Github account, just shoot me a DM on Discord -- `koiyakiya`
 
-You can move the install directory later, but you have to run the install again if you do that.
