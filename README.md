@@ -43,10 +43,10 @@ If you are a Firefox user and/or have built Yomitan from source, you need to obt
     - ❗***Make sure to remember the `chrome-extension://` AND the `/` at the end of the ID!!***
     - Then, rerun the script as seen above and when it displays `Add more extension IDs`, paste the extension ID URL that you got. It should work. Continue with the tutorial.
 - Firefox:
-    - Open up your Yomitan settings page. The URL should look like this:
-    - ![image](https://github.com/user-attachments/assets/618f262e-ce3c-47eb-a1e4-d60dd684adaa)
-    - Now, copy everything in between `moz-extension://` and `/settings.html`. For example: `9ed7d4a5-f8cd-4285-9977-e6389a91fd72`.
-    - Next, put the line of numbers and letters in between brackets: `{9ed7d4a5-f8cd-4285-9977-e6389a91fd72}`. That is your Extension ID. Copy it.
+    - Go to `about:debugging`, then select `This Firefox` at the sidebar.
+    - Scroll until you find Yomitan. It should look like this:
+    - ![image](https://github.com/user-attachments/assets/f4522553-d1cf-46dd-b1cf-e75efd3089ed)
+    - Now, copy the `Extension ID`. For example: `{2d13e145-294e-4ead-9bce-b4644b203a00}`.
     - Rerun the script as seen above and when it displays `Add more extension IDs`, paste the extension ID **with the brackets** in the input. It should work. Continue with the tutorial.
 
 ## FAQ
