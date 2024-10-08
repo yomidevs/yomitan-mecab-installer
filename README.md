@@ -20,17 +20,17 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
         - Ubuntu: `sudo apt install mecab mecab-ipadic-utf8`
         - Fedora: `sudo dnf install mecab mecab-ipadic`
         - Arch: `sudo pacman -S mecab-git mecab-ipadic`
-3. [Download](https://github.com/themoeway/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
+3. [Download](https://github.com/yomidevs/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
     - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
 4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
-    - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.**
+    - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](https://github.com/yomidevs/yomitan-mecab-installer/blob/master/README.md#-how-to-find-your-extension-id) section below.**
 5. Go to the Yomitan settings page on your browser.
 6. Enable advanced options by clicking the toggle switch in the bottom left corner.
 7. Go to `Text Parsing`.
 8. Enable `Parse sentences using MeCab` and click `More...`.
 9. Click the `Test` button to see if MeCab was installed correctly.
     - `Connection was successful.` - MeCab is now installed, congratulations.
-    - `Could not connect to native MeCab component` - Something went wrong. Please refer to the [Notes](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#notes) section and the [FAQ](https://github.com/themoeway/yomitan-mecab-installer/blob/master/README.md#faq).
+    - `Could not connect to native MeCab component` - Something went wrong. Please refer to the [Notes](https://github.com/yomidevs/yomitan-mecab-installer/blob/master/README.md#notes) section and the [FAQ](https://github.com/yomidevs/yomitan-mecab-installer/blob/master/README.md#faq).
 
 ## ❓ How to find your extension ID
 
