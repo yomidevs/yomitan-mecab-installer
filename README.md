@@ -28,7 +28,7 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
    - For Linux and probably macOS too, run `source .venv/bin/activate`.
 6. Now that you're sourced into the venv, install the requirements: `pip install -r requirements.txt`
 7. And with that, run the script! `python install_mecab_for_yomitan.py` Proceed with the instructions given.
-  - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](README.md#-how-to-find-your-extension-id) section below.**
+   - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](README.md#-how-to-find-your-extension-id) section below.**
 8. Go to the Yomitan settings page on your browser.
 9. Enable advanced options by clicking the toggle switch in the bottom left corner.
 10. Go to `Text Parsing`.
