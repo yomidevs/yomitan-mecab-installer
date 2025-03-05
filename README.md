@@ -22,13 +22,18 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
         - Arch: `sudo pacman -S mecab-git mecab-ipadic`
 3. [Download](https://github.com/yomidevs/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
     - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
-4. Open the directory in a terminal and run `py install_mecab_for_yomitan.py` and follow the instructions.
-    - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](README.md#-how-to-find-your-extension-id) section below.**
-5. Go to the Yomitan settings page on your browser.
-6. Enable advanced options by clicking the toggle switch in the bottom left corner.
-7. Go to `Text Parsing`.
-8. Enable `Parse sentences using MeCab` and click `More...`.
-9. Click the `Test` button to see if MeCab was installed correctly.
+4. Open the directory in a terminal and run `python -m venv .venv`
+5. Then, you must source into the virtual environment
+   - For Windows, run `.\.venv\Scripts\activate.bat` in the terminal.
+   - For Linux and probably macOS too, run `source .venv/bin/activate`.
+6. Now that you're sourced into the venv, install the requirements: `pip install -r requirements.txt`
+7. And with that, run the script! `python install_mecab_for_yomitan.py` Proceed with the instructions given.
+  - ❗❗ **If you use Firefox or have built Yomitan from source, please refer to the [How to find your extension ID](README.md#-how-to-find-your-extension-id) section below.**
+8. Go to the Yomitan settings page on your browser.
+9. Enable advanced options by clicking the toggle switch in the bottom left corner.
+10. Go to `Text Parsing`.
+11. Enable `Parse sentences using MeCab` and click `More...`.
+12. Click the `Test` button to see if MeCab was installed correctly.
     - `Connection was successful.` - MeCab is now installed, congratulations.
     - `Could not connect to native MeCab component` - Something went wrong. Please refer to the [Notes](README.md#notes) section and the [FAQ](README.md#faq).
 
