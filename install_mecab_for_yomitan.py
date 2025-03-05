@@ -159,8 +159,26 @@ def manifest_install_file(manifest, path):
 
 def download_dict(url, compression):
     print('Downloading...')
-    try: os.makedirs('data')
-    except: pass
+    try:
+        os.makedirs('data')
+    except:
+        pass
+
+    try:
+        import certifi
+    except ImportError:
+        print("Error: The 'certifi' package is required for SSL certificate verification.")
+        print("Please install it by running 'pip install certifi' and try again.")
+        sys.exit(1)
+
+    import ssl
+    from urllib.request import build_opener, HTTPSHandler, install_opener
+
+    context = ssl.create_default_context(cafile=certifi.where())
+    https_handler = HTTPSHandler(context=context)
+    opener = build_opener(https_handler)
+    install_opener(opener)
+
     tmp_path, _ = urlretrieve(url)
     if compression == 'zip':
         extract_zip(tmp_path, 'data')
