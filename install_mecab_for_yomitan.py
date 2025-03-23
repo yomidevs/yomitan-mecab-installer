@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Copyright (C) 2019 siikamiika
-# Author: siikamiika
+# Author: siikamiika (modified to include Brave by ChatGPT)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -56,6 +56,10 @@ BROWSER_DATA = {
         'extension_id_key': 'allowed_origins',
         'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
     },
+    'brave': {
+        'extension_id_key': 'allowed_origins',
+        'extension_ids': ['chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/', 'chrome-extension://glnaenfapkkecknnmginabpmgkenenml/'],
+    },
 }
 
 PLATFORM_DATA = {
@@ -73,6 +77,10 @@ PLATFORM_DATA = {
             'chromium': {
                 'methods': ['file'],
                 'path': os.path.expanduser('~/.config/chromium/NativeMessagingHosts/'),
+            },
+            'brave': {
+                'methods': ['file'],
+                'path': os.path.expanduser('~/.config/BraveSoftware/Brave-Browser/NativeMessagingHosts/'),
             },
         }
     },
@@ -98,6 +106,11 @@ PLATFORM_DATA = {
                 'path': DIR,
                 'registry_path': 'SOFTWARE\\Microsoft\\Edge\\NativeMessagingHosts\\{}'.format(NAME),
             },
+            'brave': {
+                'methods': ['file', 'registry'],
+                'path': DIR,
+                'registry_path': 'SOFTWARE\\BraveSoftware\\Brave-Browser\\NativeMessagingHosts\\{}'.format(NAME),
+            },
         }
     },
     'mac': {
@@ -114,6 +127,10 @@ PLATFORM_DATA = {
             'chromium': {
                 'methods': ['file'],
                 'path': os.path.expanduser('~/Library/Application Support/Chromium/NativeMessagingHosts/'),
+            },
+            'brave': {
+                'methods': ['file'],
+                'path': os.path.expanduser('~/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts/'),
             },
         }
     },
@@ -152,8 +169,10 @@ def manifest_get(browser, messaging_host_path, additional_ids=[]):
     return json.dumps(manifest, indent=4)
 
 def manifest_install_file(manifest, path):
-    try: os.makedirs(path)
-    except: pass
+    try: 
+        os.makedirs(path)
+    except: 
+        pass
     with open(os.path.join(path, NAME + '.json'), 'w') as f:
         f.write(manifest)
 
@@ -189,7 +208,6 @@ def extract_zip(zip_path, extract_path):
     with zipfile.ZipFile(zip_path, 'r') as z:
         z.extractall(extract_path)
 
-
 def main():
     platform_data = platform_data_get()
 
@@ -219,7 +237,7 @@ def main():
             ))
         script_path = bat_path
     manifest_install_data = platform_data['manifest_install_data'][browser]
-    # fix macos user dictionary permission issue
+    # fix macOS user dictionary permission issue
     if platform_data['platform'] == 'mac':
         script_path = os.path.join(manifest_install_data['path'], 'mecab.py')
         try:
@@ -259,7 +277,6 @@ def main():
         dictionary = mecab_dictionaries[int(input('Choose dictionary: ')) - 1]
         dictionary_data = DICTIONARY_DATA[dictionary]
         download_dict(dictionary_data['url'], 'zip')
-
 
 if __name__ == '__main__':
     main()
