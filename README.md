@@ -4,6 +4,9 @@
 
 [MeCab](https://taku910.github.io/) is a third-party program which uses its own dictionaries and parsing algorithm to decompose Japanese sentences into individual words. MeCab may produce more accurate parsing results than Yomitan’s own internal parser.
 
+## Note
+This doesn't affect anything other than the search page for Yomitan, and is mostly useless since Yomitan's internal parser is good enough for most cases. Just to let you know!
+
 ## ⏬ Installation
 
 Note: [Homebrew](https://brew.sh/) is required for Mac devices.
