@@ -237,18 +237,6 @@ def main():
             ))
         script_path = bat_path
     manifest_install_data = platform_data['manifest_install_data'][browser]
-    # fix macOS user dictionary permission issue
-    if platform_data['platform'] == 'mac':
-        script_path = os.path.join(manifest_install_data['path'], 'mecab.py')
-        try:
-            shutil.copy(os.path.join(DIR, 'mecab.py'), script_path)
-            print(f"File copied from {os.path.join(DIR, 'mecab.py')} to {script_path}")
-        except FileNotFoundError:
-            print("File not found.")
-        except PermissionError:
-            print("Permission denied.")
-        except Exception as e:
-            print(f"An error occurred: {e}")
     manifest = manifest_get(browser, script_path, additional_extension_ids)
     for method in manifest_install_data['methods']:
         if method == 'file':
