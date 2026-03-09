@@ -75,12 +75,16 @@ def send_message(message_content):
 
 class Mecab:
     dictionaries = {
-        'ipadic': ['pos', 'pos2', '_', '_', '_', '_', 'expression', 'reading', 'pron'],
-        'ipadic-neologd': ['pos', 'pos2', '_', '_', '_', '_', 'expression', 'reading', 'pron'],
+        'ipadic': ['pos1', 'pos2', 'pos3', 'pos4', 'inflection_type', 'inflection_form', 'expression', 'reading', 'pron'],
+        'ipadic-neologd': ['pos1', 'pos2', 'pos3', 'pos4', '_', '_', 'expression', 'reading', 'pron'],
         'unidic-mecab-translate': [
-            'pos', 'pos2', 'pos3', 'pos4', 'inflection_type', 'inflection_form',
+            'pos1', 'pos2', 'pos3', 'pos4', 'inflection_type', 'inflection_form',
             'lemma_reading', 'lemma', 'expression', 'reading', 'expression_base', 'reading_base'
         ],
+        'unidic-csj-202302': [
+            'pos1', 'pos2', 'pos3', 'pos4', 'inflection_type', 'inflection_form',
+            'lemma_reading', 'lemma', 'expression', 'reading', 'expression_base', 'reading_base'
+        ]
     }
     skip_patt = u'[\s\u30fb]'
 
@@ -156,7 +160,7 @@ class Mecab:
                     try:
                         parsed_part['source'], output_part_info = output_part.split('\t', 1)
                         output_part_info_parsed = [None if i == '*'
-                                                   else re.sub(Mecab.skip_patt, '', i.split('-')[0])
+                                                   else re.sub(Mecab.skip_patt, '|', i)
                                                    for i in output_part_info.split(',')]
                         parsed_part.update(zip_longest(self.dictionary, output_part_info_parsed))
                         parsed_line.append(parsed_part)
@@ -197,7 +201,8 @@ class MecabOrchestrator:
             print(e, file=sys.stderr)
             if retry:
                 self.reload_mecabs()
-                self.parse(text, dictionaries, False)
+                return self.parse(text, dictionaries, False)
+            raise
 
     def reload_mecabs(self):
         self.stop_mecabs()
