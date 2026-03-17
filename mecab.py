@@ -112,6 +112,10 @@ class Mecab:
         return 'mecab'
 
     def get_nt_executable_path(self):
+        # look for mecab.exe in the current directory
+        for root, dirs, files in os.walk(DIR):
+            if 'mecab.exe' in files:
+                return os.path.join(root, 'mecab.exe')
         # look up from registry
         if sys.version_info[0] == 3:
             import winreg
@@ -136,14 +140,17 @@ class Mecab:
 
     def get_darwin_executable_path(self):
         # check %PATH%
-        if shutil.which('mecab') != None:
-            return 'mecab'
-        # assume mecab is installed via Homebrew
-        if platform.processor() == 'arm':
-            # use default Apple Silicon path
-            return '/opt/homebrew/bin/mecab'
-        # use default macOS Intel path
-        return '/usr/local/bin/mecab'
+        path = shutil.which('mecab')
+        if path is not None:
+            return path
+        # check common locations
+        path = '/opt/homebrew/bin/mecab'
+        if os.path.isfile(path):
+            return path
+        path = '/usr/local/bin/mecab'
+        if os.path.isfile(path):
+            return path
+        return 'mecab'
 
     def parse(self, text):
         parsed_lines = []
