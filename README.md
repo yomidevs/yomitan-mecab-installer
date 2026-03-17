@@ -17,16 +17,19 @@ Note: [Homebrew](https://brew.sh/) is required for Mac devices.
          - [Chocolately](https://chocolatey.org/): `choco install python`
     - Mac: Run `brew install python3`
     - Linux: Python is usually included with your distribution.
-2. Install MeCab.
-    - Windows: https://taku910.github.io/mecab/#download (In the `Binary package for MS-Windows` header.)
+2. [Download](https://github.com/yomidevs/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
+    - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
+3. Install MeCab.
+    - Windows: https://shogo82148.github.io/mecab/#download (In the `Binary package for MS-Windows` header.)
+        - Download and extract the files to the directory from step 2.
+        - The path should look similar to this: `yomitan-mecab-installer/mecab-msvc-x64-0.996.13/` with the `mecab.exe` and other files inside.
+        - You should only have one mecab folder in this directory. If installing a later version, remove the previous one first.
     - Mac: Simply run `brew install mecab`.
     - Linux: It depends on your distribution, but most package managers have mecab as a package. Search around for your specific distribution. Make sure to install the dictionary that comes with it, though.
         - Ubuntu: `sudo apt install mecab mecab-ipadic-utf8`
         - Fedora: `sudo dnf install mecab mecab-ipadic`
         - Arch: `sudo pacman -S mecab-git mecab-ipadic`
-3. [Download](https://github.com/yomidevs/yomitan-mecab-installer/archive/master.zip) and extract this repository to the location you wish to install the files.
-    - ❗Your downloads folder might not be the best place, as the dictionary files are stored in the same directory.
-4. Open the directory in a terminal and run `python -m venv .venv`
+4. Open the directory from step 2 in a terminal and run `python -m venv .venv`
 5. Then, you must source into the virtual environment
    - For Windows, run `.\.venv\Scripts\activate.bat` in the terminal.
    - For Linux and probably macOS too, run `source .venv/bin/activate`.
